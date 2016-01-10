@@ -8,22 +8,25 @@ namespace Hackbox\Shapes;
  * have 3 sides and that any 2 sides added together are greater than the 
  * remaining side.
  * 
- * TrianglesSides can also perform basic geometerical computations that use the
- * knows all three values of sides.
+ * TrianglesSides can also perform basic geometerical computations where all
+ * three values of the triangle's sides are known.
  */
 class TriangleSides
 {
     /**
+     * Side A
      * @var float $a 
      */
     private $a;
     
     /**
+     * Side B
      * @var float $b 
      */
     private $b;    
 
     /**
+     * Side C
      * @var float $c 
      */
     private $c;
@@ -41,7 +44,7 @@ class TriangleSides
         try {
             $this->isTriangle();
         } catch (Exception $e) {
-            $e->getMessage();
+            echo $e->getMessage();
         }
     } 
     
