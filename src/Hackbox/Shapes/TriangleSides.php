@@ -85,6 +85,16 @@ class TriangleSides
                 $this->b != $this->c &&
                 $this->a != $this->c);
     }
+
+    /**
+     * Determines whether the triangle is isosceles.
+     * @return bool 
+     */
+    public function isIsosceles()
+    {
+        //If triangle is not scalene and is not equilateral it's isosceles.
+        return (!$this->isEquilateral() && !$this->isScalene());
+    }    
     
     /**
      * Computes the perimeter of the triangle.
