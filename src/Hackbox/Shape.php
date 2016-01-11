@@ -38,7 +38,7 @@ class Shape
      */
     public function getPerimeter()
     {
-        return !empty($this->perimeter) ? $this->perimeter : "";
+        return !empty($this->perimeter) ? $this->perimeter : 0;
     }
     
     /**
@@ -47,7 +47,7 @@ class Shape
      */
     public function getArea()
     {
-        return !empty($this->area) ? $this->area : "";
+        return !empty($this->area) ? $this->area : 0;
     }
 
 }
