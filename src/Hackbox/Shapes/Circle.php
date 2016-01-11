@@ -54,6 +54,6 @@ class Circle extends Shape implements ShapeContract
      */
     private function setArea()
     {
-        $this->area = pi() * ($this->radius * $this->radius);
+        $this->area = pi() * pow($this->radius, 2);
     }
 }

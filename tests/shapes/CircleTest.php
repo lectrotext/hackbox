@@ -5,7 +5,7 @@ class CircleTest extends PHPUnit_Framework_TestCase
 {
     public function testName()
     {
-        $circle = new Circle("2");
+        $circle = new Circle(.05);
         
         $this->assertEquals("Circle", $circle->getName());
     }

@@ -1,26 +1,22 @@
 <?php
 use \Mockery as m;
 use Hackbox\Shapes\Triangle;
-use Hackbox\Shapes\TriangleSides;
 
 class TriangleTest extends PHPUnit_Framework_TestCase
 {
     public function testTriangle()
     {
-        $sides = m::mock(new TriangleSides(3,4,5));
-        $sides->shouldReceive('isEquilateral', 
-                              'isIsosceles', 
+        $sides = m::mock(new TriangleSides());
+        $sides->shouldReceive('isEquilateral',  
                               'isScalene',
                               'getPerimeter',
                               'getArea')
-              ->andReturn(false, false, true, 12, 6);
+              ->andReturn(true, false, 12.45, 18.02);
         
         $triangle = new Triangle($sides);
         
-        $this->assertEquals("Scalene Triangle", $triangle->getName());
-        $this->assertEquals(12, $triangle->getPerimeter());
-        $this->assertEquals(6, $triangle->getArea());
+        $this->assertEquals("Equilateral Triangle", $triangle->getName());
+        $this->assertEquals(12.45, $triangle->getPerimeter());
+        $this->assertEquals(18.02, $triangle->getArea());
     }
 }
-
-?>

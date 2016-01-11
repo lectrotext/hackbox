@@ -8,12 +8,12 @@ class ShapeTest extends PHPUnit_Framework_TestCase
     {
         $mock = m::mock(new Shape);
         $mock->shouldReceive('getName', 'getPerimeter', 'getArea')
-             ->andReturn('Rombus', 12.0, 30.0);
+             ->andReturn('Rombus', 12.0, 30.75);
         
         
         $this->assertEquals('Rombus', $mock->getName());
         $this->assertEquals(12.0, $mock->getPerimeter());
-        $this->assertEquals(30.0, $mock->getArea());
+        $this->assertEquals(30.75, $mock->getArea());
     }
 
     public function testEmptyShape()
