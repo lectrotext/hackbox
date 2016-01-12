@@ -41,11 +41,8 @@ class TriangleSides
         $this->a = (float) $a;
         $this->b = (float) $b;
         $this->c = (float) $c;
-        try {
-            $this->isTriangle();
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        }
+        
+        $this->isTriangle();
     } 
     
     /**
@@ -111,9 +108,9 @@ class TriangleSides
      */
     public function getArea()
     {
-        return  sqrt((($this->a + ($this->b + $this->c)) * 
-                      ($this->c - ($this->a - $this->b)) * 
-                      ($this->c + ($this->a - $this->b)) * 
-                      ($this->a + ($this->b - $this->c))) / 4);
+        // semiperimeter
+        $s = ($this->a + $this->b + $this->c) / 2;
+        
+        return  sqrt($s * ($s - $this->a) * ($s - $this->b) * ($s - $this->c));
     }
 }

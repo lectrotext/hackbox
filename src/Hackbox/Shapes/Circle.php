@@ -12,11 +12,6 @@ use Hackbox\ShapeContract;
 class Circle extends Shape implements ShapeContract
 {
     /**
-     * Shape Name  
-     */
-    const SHAPE_NAME = "Circle";
-        
-    /**
      * @var float $radius
      */
     private $radius;
@@ -36,15 +31,15 @@ class Circle extends Shape implements ShapeContract
     /**
      * Sets the name of the circle. 
      */
-    private function setName()
+    public function setName()
     {
-        $this->name = self::SHAPE_NAME;
+        $this->name = 'Circle';
     }
 
     /**
      * Sets the perimeter aka the circumference of a circle.
      */
-    private function setPerimeter()
+    public function setPerimeter()
     {
         $this->perimeter = 2 * pi() * $this->radius;
     }
@@ -52,7 +47,7 @@ class Circle extends Shape implements ShapeContract
     /**
      * Sets the area of a circle.
      */
-    private function setArea()
+    public function setArea()
     {
         $this->area = pi() * pow($this->radius, 2);
     }

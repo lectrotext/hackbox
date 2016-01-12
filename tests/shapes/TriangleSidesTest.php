@@ -1,5 +1,4 @@
 <?php
-
 use Hackbox\Shapes\TriangleSides;
 
 class TriangleSidesTest extends PHPUnit_Framework_TestCase

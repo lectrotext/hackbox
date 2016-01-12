@@ -1,6 +1,7 @@
 <?php
 use \Mockery as m;
 use Hackbox\Shapes\Triangle;
+use Hackbox\Shapes\TriangleSides;
 
 class TriangleTest extends PHPUnit_Framework_TestCase
 {

@@ -6,7 +6,7 @@ class ShapeTest extends PHPUnit_Framework_TestCase
 {
     public function testShape()
     {
-        $mock = m::mock(new Shape);
+        $mock = m::mock(new Shape());
         $mock->shouldReceive('getName', 'getPerimeter', 'getArea')
              ->andReturn('Rombus', 12.0, 30.75);
         

@@ -51,7 +51,7 @@ class Triangle extends Shape implements ShapeContract
      * Sets the name of the shape and the type (equilateral, isosceles, or 
      * scalene)
      */
-    private function setName()
+    public function setName()
     {
         if ($this->sides->isEquilateral()) {
             $this->type = self::TYPE_EQUILATERAL;
@@ -67,7 +67,7 @@ class Triangle extends Shape implements ShapeContract
     /**
      * Sets is the perimeter of the triangle. 
      */
-    private function setPerimeter()
+    public function setPerimeter()
     {
         $this->perimeter = $this->sides->getPerimeter();
     }
@@ -75,7 +75,7 @@ class Triangle extends Shape implements ShapeContract
     /**
      * Sets the area of the triangle. 
      */
-    private function setArea()
+    public function setArea()
     {
         $this->area = $this->sides->getArea();
     }

@@ -9,7 +9,7 @@ namespace Hackbox;
  */
 interface ShapeContract 
 {
-    abstract function setName();
-    abstract function setPerimeter();
-    abstract function setArea();
+    public function setName();
+    public function setPerimeter();
+    public function setArea();
 }
