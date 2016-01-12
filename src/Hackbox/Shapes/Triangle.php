@@ -42,9 +42,9 @@ class Triangle extends Shape implements ShapeContract
     {
         $this->sides = $sides;
         // Set the Shape class member variables.
-        $this->name = $this->setName();
-        $this->perimeter = $this->setPerimeter();
-        $this->area = $this->setArea();
+        $this->setName();
+        $this->setPerimeter();
+        $this->setArea();
     }
     
     /**

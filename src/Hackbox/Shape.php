@@ -29,7 +29,7 @@ class Shape
      */
     public function getName()
     {
-        return !empty($this->name) ? $this->name : "";
+        return $this->name;
     }
 
     /**
@@ -38,7 +38,7 @@ class Shape
      */
     public function getPerimeter()
     {
-        return !empty($this->perimeter) ? $this->perimeter : 0;
+        return $this->perimeter;
     }
     
     /**
@@ -47,7 +47,7 @@ class Shape
      */
     public function getArea()
     {
-        return !empty($this->area) ? $this->area : 0;
+        return $this->area;
     }
 
 }

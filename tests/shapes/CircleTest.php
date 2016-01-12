@@ -1,25 +1,24 @@
 <?php
-use Hackbox\Shapes\Circle;
 
 class CircleTest extends PHPUnit_Framework_TestCase
 {
-    public function testName()
+    public function testCircleName()
     {
-        $circle = new Circle(.05);
+        $circle = new Hackbox\Shapes\Circle(.05);
         
         $this->assertEquals("Circle", $circle->getName());
     }
     
-    public function testPerimeter()
+    public function testCirclePerimeter()
     {
-        $circle = new Circle(3);
+        $circle = new Hackbox\Shapes\Circle(3);
         
         $this->assertEquals(18.85, round($circle->getPerimeter(), 2));
     }
     
-    public function testArea()
+    public function testCircleArea()
     {
-        $circle = new Circle("10");
+        $circle = new Hackbox\Shapes\Circle("10");
     
         $this->assertEquals(314.16, round($circle->getArea(), 2));
     }

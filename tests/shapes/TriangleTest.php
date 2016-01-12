@@ -7,7 +7,7 @@ class TriangleTest extends PHPUnit_Framework_TestCase
 {
     public function testTriangle()
     {
-        $sides = m::mock(new TriangleSides());
+        $sides = m::mock('Hackbox\Shapes\TriangleSides');
         $sides->shouldReceive('isEquilateral',  
                               'isScalene',
                               'getPerimeter',
@@ -16,7 +16,7 @@ class TriangleTest extends PHPUnit_Framework_TestCase
         
         $triangle = new Triangle($sides);
         
-        $this->assertEquals("Equilateral Triangle", $triangle->getName());
+        $this->assertEquals('Equilateral Triangle', $triangle->getName());
         $this->assertEquals(12.45, $triangle->getPerimeter());
         $this->assertEquals(18.02, $triangle->getArea());
     }
