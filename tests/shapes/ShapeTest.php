@@ -7,13 +7,9 @@ class ShapeTest extends PHPUnit_Framework_TestCase
     {
         $shape = m::mock('Hackbox\Shape');
         
-        $shape->shouldReceive('getName')
-              ->andReturn('Rombus');
-        $shape->shouldReceive('getPerimeter')
-              ->andReturn(12.0);
-        $shape->shouldReceive('getArea')
-              ->andReturn(30.75);
-        
+        $shape->shouldReceive('getName')->andReturn('Rombus');
+        $shape->shouldReceive('getPerimeter')->andReturn(12.0);
+        $shape->shouldReceive('getArea')->andReturn(30.75);
         
         $this->assertEquals('Rombus', $shape->getName());
         $this->assertEquals(12.0, $shape->getPerimeter());

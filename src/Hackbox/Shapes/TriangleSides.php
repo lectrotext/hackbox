@@ -109,7 +109,7 @@ class TriangleSides
     public function getArea()
     {
         // semiperimeter
-        $s = ($this->a + $this->b + $this->c) / 2;
+        $s = $this->getPerimeter() / 2;
         
         return  sqrt($s * ($s - $this->a) * ($s - $this->b) * ($s - $this->c));
     }

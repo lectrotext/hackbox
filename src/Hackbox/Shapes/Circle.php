@@ -2,14 +2,14 @@
 namespace Hackbox\Shapes;
 
 use Hackbox\Shape;
-use Hackbox\ShapeContract;
+use Hackbox\IShape;
 
 /**
  * Class: Circle 
  * 
  * A basic shape only requiring a scalar value of the radius.
  */
-class Circle extends Shape implements ShapeContract
+class Circle extends Shape implements IShape
 {
     /**
      * @var float $radius

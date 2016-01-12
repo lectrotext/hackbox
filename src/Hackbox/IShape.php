@@ -2,12 +2,12 @@
 namespace Hackbox;
 
 /**
- * Interface: ShapeContract
+ * Interface: IShape
  * 
  * Any class extending Shape should also implement this interface so that the 
  * member variables of Shape are indeed set by the extending class. 
  */
-interface ShapeContract 
+interface IShape 
 {
     public function setName();
     public function setPerimeter();

@@ -1,7 +1,5 @@
 <?php
 use \Mockery as m;
-use Hackbox\Shapes\Triangle;
-use Hackbox\Shapes\TriangleSides;
 
 class TriangleTest extends PHPUnit_Framework_TestCase
 {
@@ -14,7 +12,7 @@ class TriangleTest extends PHPUnit_Framework_TestCase
                               'getArea')
               ->andReturn(true, false, 12.45, 18.02);
         
-        $triangle = new Triangle($sides);
+        $triangle = new Hackbox\Shapes\Triangle($sides);
         
         $this->assertEquals('Equilateral Triangle', $triangle->getName());
         $this->assertEquals(12.45, $triangle->getPerimeter());
