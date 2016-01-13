@@ -2,7 +2,6 @@
 namespace Hackbox\Shapes;
 
 use Hackbox\Shape;
-use Hackbox\IShape;
 
 /**
  * Class: Triangle 
@@ -10,7 +9,7 @@ use Hackbox\IShape;
  * A basic shape that needs a TriangleSides Object in order to determine name  
  * and compute area & perimeter values.
  */
-class Triangle extends Shape implements IShape
+class Triangle extends Shape
 {
     /**
      * Shape Name  

@@ -2,14 +2,13 @@
 namespace Hackbox\Shapes;
 
 use Hackbox\Shape;
-use Hackbox\IShape;
 
 /**
  * Class: Circle 
  * 
  * A basic shape only requiring a scalar value of the radius.
  */
-class Circle extends Shape implements IShape
+class Circle extends Shape
 {
     /**
      * @var float $radius
@@ -23,17 +22,9 @@ class Circle extends Shape implements IShape
     {
         $this->radius = (float) $radius;
         // Set the Shape class member variables.
-        $this->setName();
+        $this->name = 'Circle';
         $this->setPerimeter();
         $this->setArea();
-    }
-    
-    /**
-     * Sets the name of the circle. 
-     */
-    public function setName()
-    {
-        $this->name = 'Circle';
     }
 
     /**
